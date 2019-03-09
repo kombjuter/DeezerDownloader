@@ -5,6 +5,7 @@ Supports Tracks and Playlists.
 
 Usage:
 ```
+pip3 install -r requirements.txt
 python3 --email EMAIL --password PASSWORD --link LINK
 ```
 TODO:
