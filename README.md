@@ -1,2 +1,4 @@
 # DeezerDownloader
-Download songs from Deezer to mp3
+
+Usage:
+python3 --email EMAIL --password PASSWORD --link LINK
