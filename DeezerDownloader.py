@@ -140,13 +140,8 @@ class DeezerDownloader():
         songname = jsonData['DATA']['SNG_TITLE']
         songhandling = '{} - {}.mp3'.format(artist, songname)
         songhandling = re.sub(u"(\u2018|\u2019)", "'", songhandling)
-        songhandling = songhandling.replace('/', '')
-        songhandling = songhandling.replace('*', '')
-        songhandling = songhandling.replace('?', '')
-        songhandling = songhandling.replace('"', '')
-        songhandling = songhandling.replace('<', '')
-        songhandling = songhandling.replace('>', '')
-        songhandling = songhandling.replace('|', '')
+        for i in '/*?"<>|':
+            songhandling = songhandling.replace(i, '')
         path = self.path + songhandling
         try:
             os.mkdir(self.path)
